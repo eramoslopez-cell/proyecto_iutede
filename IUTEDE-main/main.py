@@ -22,7 +22,6 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -31,6 +30,6 @@ app.add_middleware(
 app.include_router(router)
 
 #endpoint de salud, para ver si la api esta funcionando o no
-@app.get("/",tags=["Healht"])
-def healht_check():
+@app.get("/",tags=["Health salud check"])
+def health_check():
     return{"Status": "ok", "api": "IUTEDE Backend", "Version": "1.0.0"}
