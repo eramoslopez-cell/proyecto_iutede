@@ -2,6 +2,6 @@ services:
   - type: web
     name: modeladosoftwarenoche
     env: python
-    buildCommand: cd IUTEDE-main && pip install -r ../requirements.txt
+    buildCommand: pip install -r requirements.txt
     startCommand: cd IUTEDE-main && uvicorn main:app --host 0.0.0.0 --port $PORT
   
