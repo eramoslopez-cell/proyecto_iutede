@@ -1,2 +1,11 @@
 .env
 env
+# Python cache and virtual environment
+__pycache__/
+*.pyc
+venv/
+
+# Node dependencies
+node_modules/
+frontend/node_modules/
+
