@@ -9,12 +9,13 @@
 #Base: clase padre de la cual heredam todos los modelos del ORM
 
 import os
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, DeclarativeBase
 
 #cargar las variables definidas en archivos de entorno al entorno del proceso
-load_dotenv()
+#Busca el archivo .env en el directorio actual y en los padres del proyecto.
+load_dotenv(find_dotenv())
 if os.path.exists('env'):
     load_dotenv('env')
 #esto evita tener que escribir las variables directamente
